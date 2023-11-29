@@ -86,7 +86,7 @@ span{
     border-radius: 0.5rem;
     background-color: azure;
     width: 38rem;
-    height:26rem;
+    height:25rem;
     overflow-y: scroll;
 }
 
@@ -101,7 +101,7 @@ h2{
   
     padding-left: 2rem;
     width: 38rem;
-    background-color: #FB350E;
+    background-color: #ffffff;
   
 }
 
@@ -116,5 +116,6 @@ h2{
 }
 
 #cards{
+
     border-radius: 0.5rem;
 }
