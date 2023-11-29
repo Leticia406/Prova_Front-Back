@@ -23,12 +23,12 @@
     <header>
         
         <!-- Cabeçalho-->
-        <nav class="navbar navbar-expand-sm fixed-top bg-crud" >
+        <nav class="navbar navbar-expand-sm fixed-top bg-crud" id="corfundo">
             <section class="container py-md-0 " >
-                <section class="container py-0 ">
-                    <a href="" class="navbar-brand position-absolute top start">
+                <section class="container py-0  " >
+                    <a href="" class="navbar-brand position-absolute">
                         <img src="./imagens/logolistacompra.png" alt="">
-                        <span class="px-3">LISTA DE COMPRAS</span>
+                        <span class="px-3 position-absolute top-0 start-100">LISTA DE COMPRAS</span>
                     </a>
     
                     
@@ -44,7 +44,7 @@
             <section class="row">
     
                 <section class="col-12 col-lg-6">
-                    <section>
+                    <section class="position-fixed">
     
                         <section class="row"id="mx-auto">
                             <!--1-->
@@ -70,11 +70,14 @@
                 </section>
                 <section class="col-12 col-lg-6" >
                    
-                    <div class="card w-100 h-100">
-                        <div class="card-body"  >
-                          
-                             <table>
+                    <div class="card w-100 h-100" >
+                        <div class="card-body position-fixed bg-warning" id="cards" >
+                           <h2 >Sua lista</h2>
+                             <table >
+                               
                               <div id="get"> 
+                               
+
                               </div>
                              </table>
                           

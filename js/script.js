@@ -7,6 +7,8 @@ if(resposta.status == 200){
         const div = document.querySelector("#get");
         dados.map ( (produto)=>{
 
+           
+
             const input = document.createElement('input')
             input.type = "checkbox"
 
@@ -25,19 +27,24 @@ if(resposta.status == 200){
             const categoria = document.createElement("th")
             categoria.innerText = produto.categoria
 
-            const icone = document.createElement("span");
+            
+
+            const iconeContainer = document.getElementById("iconeContainer");
+            const icone = document.createElement("button");
             icone.className = "material-symbols-outlined"
             icone.innerText = "edit"
 
 
             const edit = document.createElement('a')
-            edit.href = `./index.html?id=${produto.id}&desc=${produto.desc}&qtd=${produto.qtd}&preco=${produto.preco}&categoria=${produto.categoria}`           
+            edit.href = `./alterar.html?id=${produto.id}&desc=${produto.desc}&qtd=${produto.qtd}&preco=${produto.preco}&categoria=${produto.categoria}`           
+            edit.append(icone)
 
-            icone.append(edit)
 
-            
+          
+
+           
         
-            const icone2= document.createElement('span') 
+            const icone2= document.createElement('button') 
             icone2.className = "material-symbols-outlined"
             icone2.innerText = "delete"
 
@@ -50,7 +57,7 @@ if(resposta.status == 200){
             
 
             del.addEventListener('click', ()=>{
-                fetch(`http://localhost:3000/lista/excluir/${id}` , {
+                fetch(`http://localhost:3041/lista/excluir/${id}` , {
                     method: 'DELETE',
                     headers:{
                         'Content-type': 'application/json'
@@ -63,7 +70,7 @@ if(resposta.status == 200){
             })
            
            
-            card.append(input,desc,preco,qtd,icone,icone2,)
+            card.append(input,desc,preco,qtd,edit,icone2,)
            
             div.append(card)
         })

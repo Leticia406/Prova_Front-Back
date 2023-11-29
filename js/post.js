@@ -11,9 +11,9 @@ const categoria = params.get('categoria');
 if(id != null && desc != null && preco != null && qtd != null  && categoria != null){
 
 
-document.querySelector('button')
+document.querySelector('#editar')
 .addEventListener('click',()=>{
-    fetch(`http://localhoste/${id}` , {
+    fetch(`http://localhoste:3000/lista/alterar/${id}` , {
         method: 'PUT',
         headers:{
             'Content-type': 'application/json'
@@ -50,49 +50,3 @@ else{ document.querySelector('#botao')
     }
 })
 })}
-//         .then((resposta)=>{
-
-
-         
-//          resposta.json().then((dados)=>{
-//         const div = document.querySelector("#get");
-//         dados.map ( (produto)=>{
-//             const card = document.createElement("tr")
-//             card.id = produto.id
-
-//             const desc = document.createElement("th")
-//             desc.innerText = produto.desc
-
-//             const qtd = document.createElement("th")
-//             qtd.innerText = produto.qtd
-
-//             const preco = document.createElement("th")
-//             preco.innerText = produto.preco
-
-//             const categoria = document.createElement("th")
-//             categoria.innerText = produto.categoria
-
-//             const edit = document.createElement('a')
-//             edit.className = 'edit'
-//             edit.innerText = 'editar'
-//  edit.href = `./index.html?id=${produto.id}&desc=${produto.desc}&qtd=${produto.qtd}&preco=${produto.preco}&categoria=${produto.categoria}`           
-
-
-//             const del = document.createElement('button')
-//             del.className = 'delete'
-//             del.innerText = 'excluir'
-//             del.addEventListener('click', ()=>{
-//                 fetch(`http://localhost:3000/lista/excluir/${id}` , {
-//                     method: 'DELETE',
-//                     headers:{
-//                         'Content-type': 'application/json'
-//                     },
-//                 }).then((resposta)=>{
-//                     if(resposta.status != 200){
-//                         console.log(resposta.json())
-//                 )}
-//                 })}
-   
-//             })
-// })}
-// })

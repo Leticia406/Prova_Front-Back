@@ -3,8 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
-    font-family: 'Poppins', sans-serif;    
+    font-family: 'Poppins', sans-serif; 
+    
 }
+
+
 
 .material-symbols-outlined { 
     font-variation-settings: 'FILL' 0, 
@@ -29,6 +32,7 @@ img{
 
 #mainlocal{
     margin: 10rem;
+   
 }
 #cardbody{
     height: 30rem;
@@ -61,7 +65,7 @@ th{
 }
 
  tr{
-   
+   background-color: #f4f4f4b6;
     display: flex;
     margin: 1rem;
 
@@ -74,3 +78,43 @@ span{
     align-items: end;
 }
  
+
+
+#get{
+
+   
+    border-radius: 0.5rem;
+    background-color: azure;
+    width: 38rem;
+    height:26rem;
+    overflow-y: scroll;
+}
+
+button{
+    cursor: pointer;
+    margin: 1rem;
+    
+    
+}
+
+h2{
+  
+    padding-left: 2rem;
+    width: 38rem;
+    background-color: #FB350E;
+  
+}
+
+
+.modal-content{
+    background-color: #72C2E9;
+    width: 30rem;
+    height: 30rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+#cards{
+    border-radius: 0.5rem;
+}
